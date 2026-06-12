@@ -4,7 +4,7 @@ var router = express.Router();
 // 接続情報を設定
 const { MongoClient } = require("mongodb");
 // ↓ ここはご自身のMongoDBの接続URLに変更してください
-const uri = "xxxxx";
+const uri = "xxxxxxxx";
 const client = new MongoClient(uri);
 
 router.get('/', async (req, res) => {
