@@ -1,10 +1,12 @@
 var express = require('express');
 var router = express.Router();
+const cors = require('cors');
+require('dotenv').config();
 
 // 接続情報を設定
 const { MongoClient } = require("mongodb");
 // ↓ ここはご自身のMongoDBの接続URLに変更してください
-const uri = "xxxxxxxx";
+const uri = process.env.MONGODB_URI;
 const client = new MongoClient(uri);
 
 router.get('/', async (req, res) => {
